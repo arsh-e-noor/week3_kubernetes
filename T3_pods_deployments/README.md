@@ -1,37 +1,75 @@
-# T3 - Pods & Deployments
+# Week 3 - Kubernetes Orchestration (T3: Pods & Deployments)
 
-## Objective
+## 📌 Overview
 
-Learn Kubernetes Pods and Deployments using YAML manifests.
+This task focuses on Kubernetes workload management using Pods and Deployments. A containerized Text-to-Speech web application was deployed on a local Minikube cluster using a Docker image.
 
-## Tasks Performed
+The objective was to understand how Kubernetes manages application instances and ensures high availability using replicas.
 
-- Created a Pod using pod.yaml
-- Deployed Nginx container
-- Verified Pod status
-- Created Deployment with 3 replicas
-- Verified Deployment status
-- Tested Kubernetes self-healing
+---
 
-## Files
+## 🎯 Objectives Completed
 
-- pod.yaml
-- deployment.yaml
+- Created and managed Kubernetes Pods
+- Created Deployments with replica sets
+- Understood difference between Pod and Deployment
+- Deployed a containerized web application on Minikube
+- Verified running pods and deployment status
 
-## Commands Used
+---
 
+## 🧠 Key Concepts
+
+### Pod
+Smallest deployable unit in Kubernetes that runs a single container.
+
+### Deployment
+Manages multiple replicas of Pods and ensures:
+- Auto-healing
+- Scaling
+- Rolling updates
+
+---
+
+## 🚀 Application Details
+
+- Application: Text-to-Speech Web App
+- Type: Static Frontend (HTML, CSS, JS)
+- Container: Nginx Alpine
+- Docker Image: `tts-app:v1`
+
+---
+
+## 📄 Kubernetes Resources
+
+### Pod Configuration
+- Single instance of application
+- Used for basic testing
+
+### Deployment Configuration
+- 3 replicas of application
+- Ensures high availability
+- Self-healing enabled
+
+---
+
+## ⚙️ Deployment Commands
+
+```bash
 kubectl apply -f pod.yaml
-
-kubectl get pods
-
-kubectl describe pod nginx-pod
-
 kubectl apply -f deployment.yaml
+```
+## 📁 Project Structure
+week3_kubernetes/
+│
+└── T3_pods_deployments/
+    │
+    ├── pod.yaml
+    ├── deployment.yaml
+    ├── README.md
+    │
+    └── screenshots/
 
-kubectl get deployments
+## 🏁 Status
 
-kubectl describe deployment nginx-deployment
-
-## Result
-
-Successfully deployed Nginx Pod and Deployment with 3 replicas using Kubernetes YAML manifests.
+✔ T3 Completed Successfully

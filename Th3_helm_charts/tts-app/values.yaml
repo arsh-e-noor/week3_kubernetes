@@ -1,0 +1,30 @@
+replicaCount: 2
+
+image:
+  repository: arshen00r/text-to-speech
+  tag: "v1"
+  pullPolicy: IfNotPresent
+
+serviceAccount:
+  create: false
+
+service:
+  type: NodePort
+  port: 80
+
+ingress:
+  enabled: false
+
+httpRoute:
+  enabled: false
+
+resources: {}
+
+autoscaling:
+  enabled: false
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
